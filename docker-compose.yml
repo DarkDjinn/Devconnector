@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+    front:
+        image: node:latest
+        volumes:
+            - .:/app
+        working_dir: /app
+        ports:
+            - "3000:3000"
+            - "27017:27017"
+        command: npm run dev
